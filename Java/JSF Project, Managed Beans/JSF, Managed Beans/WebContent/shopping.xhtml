@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core">
+    
+    <f:metadata>
+    	<f:event type="preRenderView" listener="#{productController.loadProducts()}"/>
+    </f:metadata>
+    
+    <h:head>
+        <title>Shop</title>
+        <style>
+        	table {
+				border-collapse: collapse;
+			}
+			
+			table, th, td {
+				border: 1px solid black;
+			}
+						
+			th	{
+				text-align:center;
+			}
+						
+			h3	{
+				color: red;
+				background-color: honeydew;
+			}
+        </style>
+        <h:outputStylesheet library="css" name="/resources/style.css"/>
+    </h:head>
+    
+    <h:body style="background-color:peachpuff; color:orangered;">
+    
+    	<h1 style="width:25%; margin:auto;">Hello, #{user.firstName} #{user.lastName}</h1><br/>
+        
+       <div id="wrapper">
+       	<div id="header">
+       		<h2 style="width:25%; margin:auto;">Welcome to our shop!</h2>
+       	</div>
+       </div>
+       
+       <br/>
+       
+       <div id="container">
+       	<div id="content">
+       	
+       	<h:message globalOnly="true"/>
+       	
+       	
+       	<h:form style="width:30%; margin:auto;">
+		
+				<h:outputLabel>Search product:</h:outputLabel> 
+				<h:inputText value="#{productController.theSearchName}" id="theSearchName"/>
+				<h:commandButton value="Search" action="shopping?faces-redirect=true"/>            
+            
+        </h:form>
+        <br/>
+       	
+       	<h:form>
+       	
+       	<h:dataTable value="#{productController.products}" var="tempProduct"
+			       	styleClass="demo-table"
+			       	headerClass="demo-table-header"
+			       	rowClasses="demo-table-odd-row, demo-table-even-row" style="width:75%; margin:auto;">
+       	
+       		<h:column>
+	       		<!-- the column header -->
+	       		<f:facet name="header">Category Name</f:facet>
+	       		
+	       		<!-- the value for each row -->
+	       		#{tempProduct.category_name}
+       		</h:column>
+       		
+       		<h:column>
+	       		<!-- the column header -->
+	       		<f:facet name="header">Product Name</f:facet>
+	       		
+	       		<!-- the value for each row -->
+	       		#{tempProduct.product_name}
+       		</h:column>
+       		
+       		<h:column>
+	       		<!-- the column header -->
+	       		<f:facet name="header">Product Description</f:facet>
+	       		
+	       		<!-- the value for each row -->
+	       		#{tempProduct.product_descrip}
+       		</h:column>
+       		
+       		<h:column>
+					<!-- the column header -->
+					<f:facet name="header">Action</f:facet>
+
+					<h:commandLink value="Update" action="#{productController.loadProduct(tempProduct.product_id)}" style="margin-left:5%;"/>
+					<h:commandLink value="Delete"
+						onclick="if (!confirm('Are you sure you want to delete this product?')) return false"
+						action="#{productController.deleteProduct(tempProduct.product_id)}" style="margin-left:10%;"/>
+			</h:column>
+       		
+       	</h:dataTable>
+       	<br/>
+       		<h:button value="Add Product" style="width:10%; margin-left:40%;" outcome="add-product-form"/>
+       	</h:form>
+       	
+       	<br/><br/>
+       	
+       	<h:graphicImage value="/images/computer-display-electronics-2120016.jpg" style="width:20%; display: inline-block; vertical-align: text-top; margin-right:2%; margin-left:5%;"/>
+       	<h:graphicImage value="/images/blur-books-close-up-159866.jpg" style="width:20%; display: inline-block; vertical-align: text-top; margin-right:2%;"/>
+       	<h:graphicImage value="/images/cellphone-device-electronics-699122.jpg" style="width:20%; display: inline-block; vertical-align: text-top; margin-right:2%;"/>
+       	<h:graphicImage value="/images/camera-dslr-electronics-51383.jpg" style="width:20%; display: inline-block; vertical-align: text-top;"/>
+       	
+       	</div>
+       </div>
+    </h:body>
+    
+</html>

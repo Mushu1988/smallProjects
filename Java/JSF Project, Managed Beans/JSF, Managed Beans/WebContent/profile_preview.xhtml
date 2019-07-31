@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core">
+    
+    <h:head>
+        <title>Preview of the profile</title>
+    </h:head>
+    
+    <h:body style="background-color:peachpuff; color:orangered;">
+   		<h:form style="width:45%; display: inline-block; margin-left:2%; vertical-align: text-top; margin-top:3%;">
+        Please, verify the entered information and confirm the profile.<br/> If the information is incorrect, please, choose option "Editing".
+        <br/><br/>
+        
+        Id number is: #{user.id}.
+        <br/>
+        First name is:  #{user.firstName}.<br/>
+        Last name is: #{user.lastName}.<br/>
+        Phone number is: #{user.phone}.<br/>
+        Address is: #{user.address}.<br/>
+        Email is: #{user.email}.<br/>
+        User name is: #{user.userName}.<br/>
+        Password is: #{user.password}.<br/>
+        You want to receive our emails:
+        <ul>
+        	<ui:repeat value="#{user.subscription}" var="frequency">
+        		<li>#{frequency}</li>
+        	</ui:repeat>
+        </ul>
+        You`ve marked your profile to be #{user.profileSetting}.<br/><br/>
+
+        <h:selectOneMenu value="#{navigation.nextPage}">
+	          	<f:selectItem itemValue="" itemLabel="Choose to confirm or edit profile" />
+	           	<f:selectItem itemValue="Confirm" itemLabel="Confirm Profile" />
+	           	<f:selectItem itemValue="Edit" itemLabel="Edit Profile" />
+	           </h:selectOneMenu>
+		<br/><br/>
+		
+        <h:commandButton value="Submit" action="#{navigation.startNavigation()}" />
+       
+       </h:form>
+       
+       <h:graphicImage value="/images/pexels-photo-1051747.jpeg" style="width:52%; height:20%; display: inline; vertical-align: text-top;"/>
+           
+    </h:body>
+    
+</html>

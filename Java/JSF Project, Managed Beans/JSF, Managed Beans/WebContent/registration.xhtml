@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+    
+    <h:head>
+        <title>User Registration Form</title>
+        <style>
+        .error{
+			color:red;
+		}
+        </style>
+    </h:head>
+    
+    <h:body style="background-color:peachpuff; color:orangered;">
+        <h:form style="width:45%; display: inline-block; margin-left:2%;">
+        
+	        <h1>Registration Form</h1>
+	        
+	           ID number: <h:inputText id="Id" value="#{user.id}" label="ID number"
+	           					validatorMessage=" ID number shall contain digits only and consist of 8 digits.">
+	           					<f:validateLength minimum="8" maximum="8"/>
+	           					<f:validateRegex pattern="\d{8}"/>
+	           			  </h:inputText>
+	           			  <h:message for="Id" styleClass="error"/>
+	           <br/><br/>
+	        
+	           First name: <h:inputText id="FirstName" value="#{user.firstName}" label="First Name"
+	           					validatorMessage=" First name shall contain characters only (do not use digits).">
+	           					<f:validateRegex pattern="[a-zA-Z]+"/>
+	           			  </h:inputText>
+	           			  <h:message for="FirstName" styleClass="error"/>
+	           <br/><br/>
+	           
+	           Last name: <h:inputText id="LastName" value="#{user.lastName}" label="Last name"
+	           					validatorMessage=" Last name shall contain characters only (do not use digits).">
+	           					<f:validateRegex pattern="[a-zA-Z]+"/>
+	           			  </h:inputText>
+	           			  <h:message for="LastName" styleClass="error"/>
+	           <br/><br/>
+	           
+	           Phone Number: <h:inputText id="PhoneNumber" value="#{user.phone}" label="Phone Number"
+	           					validatorMessage="Phone number must follow ###-###-####">
+	           					<f:validateRegex pattern="\d{3}-\d{3}-\d{4}"/>
+	           				</h:inputText>
+	           				<h:message for="PhoneNumber" styleClass="error"/>
+	           <br/><br/>
+	           
+	           Address: <h:inputText id="Address" value="#{user.address}" label="Address"
+	           					validatorMessage=" Address field can not be longer than 200 characters.">
+	           					<f:validateLength maximum="200"/>
+	           			  </h:inputText>
+	           			  <h:message for="Address" styleClass="error"/>
+	           <br/><br/>
+	           
+	           E-mail: <h:inputText id="Email" value="#{user.email}" label="Email"
+	           					validatorMessage=" An email should contain @ and a fullstop.">
+	           					<f:validateRegex pattern="\w+@\w+.\w+"/>
+	           			  	</h:inputText>
+	           				<h:message for="Email" styleClass="error"/>
+	           <br/><br/>
+	           
+	           User name: <h:inputText id="UserName" value="#{user.userName}" label="User Name"
+	           					validator="#{user.validateTheUserName}"/>
+	           			  <h:message for="UserName" styleClass="error"/>
+	           <br/><br/>
+	           
+	           Password: <h:inputText id="Password" value="#{user.password}" label="Password"
+	           					validatorMessage=" Password can not be less than 8 characters.">
+	           					<f:validateLength minimum="8"/>
+	           			  </h:inputText>
+	           			  <h:message for="Password" styleClass="error"/>
+	           <br/><br/>
+	           
+	           Please, check if you want to receive:
+	           <br/>
+	           		<h:selectManyCheckbox value="#{user.subscription}">
+			           	<f:selectItem itemValue="monthly" itemLabel="Monthly discount email" />
+			           	<f:selectItem itemValue="weekly" itemLabel="Weekly update for new products" />
+	          		 </h:selectManyCheckbox>
+	           <br/>
+	           
+	           You want your profile to be:
+	           <br/>
+	           <h:selectOneRadio value="#{user.profileSetting}">
+	           	<f:selectItem itemValue="public" itemLabel="Public (available to be seen by everyone)" />
+	           	<f:selectItem itemValue="private" itemLabel="Private (can be seen only by you)" />
+	           </h:selectOneRadio>
+	          	<br/><br/>
+	           
+           <h:commandButton value="Submit" action="profile_preview" style="margin-left:2%;"/>
+           
+        </h:form>
+        <h:graphicImage value="/images/pexels-photo-1051747.jpeg" style="width:52%; display: inline-block;"/> 
+    </h:body>
+</html>
