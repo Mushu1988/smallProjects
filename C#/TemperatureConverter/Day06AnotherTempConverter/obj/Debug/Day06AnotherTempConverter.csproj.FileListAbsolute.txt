@@ -1,0 +1,15 @@
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\bin\Debug\Day06AnotherTempConverter.exe.config
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\bin\Debug\Day06AnotherTempConverter.exe
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\bin\Debug\Day06AnotherTempConverter.pdb
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\obj\Debug\MainWindow.g.cs
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\obj\Debug\App.g.cs
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\obj\Debug\Day06AnotherTempConverter_MarkupCompile.cache
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\obj\Debug\Day06AnotherTempConverter_MarkupCompile.lref
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\obj\Debug\MainWindow.baml
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\obj\Debug\Day06AnotherTempConverter.g.resources
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\obj\Debug\Day06AnotherTempConverter.Properties.Resources.resources
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\obj\Debug\Day06AnotherTempConverter.csproj.GenerateResource.cache
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\obj\Debug\Day06AnotherTempConverter.csproj.CoreCompileInputs.cache
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\obj\Debug\Day06AnotherTempConverter.exe
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\obj\Debug\Day06AnotherTempConverter.pdb
+C:\Users\maris\Documents\DotNet\Day06AnotherTempConverter\Day06AnotherTempConverter\obj\Debug\Day06AnotherTempConverter.csprojAssemblyReference.cache

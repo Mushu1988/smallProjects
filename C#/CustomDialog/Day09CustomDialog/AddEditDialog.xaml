@@ -1,0 +1,18 @@
+﻿<Window x:Class="Day09CustomDialog.AddEditDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Day09CustomDialog"
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        Title="AddEditDialog" Height="160.504" Width="300">
+    <Grid>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="64"/>
+        <Label Content="Age:" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="64"/>
+        <TextBox Name="tbName" HorizontalAlignment="Left" Height="23" Margin="79,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+        <TextBox Name="tbAge" HorizontalAlignment="Left" Height="23" Margin="79,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+        <Button Name="btAddUpdate" IsDefault="True" Content="Add friend" HorizontalAlignment="Left" Margin="62,91,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.248,0.395" Height="24" Click="AddUpdate_ButtonClick"/>
+        <Button IsCancel="True" Content="Cancel" HorizontalAlignment="Left" Margin="165,91,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.248,0.395" Height="24" />
+
+    </Grid>
+</Window>
